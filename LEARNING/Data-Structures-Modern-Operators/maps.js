@@ -48,14 +48,49 @@ const restaurant = {
   },
 };
 
-const question = new Map([
-  ["question", "Which is the best programming language in the world?"],
-  [1, "C"],
-  [2, "Java"],
-  [3, "JavaScript"],
-  ["correct", 3],
-  [true, "Congrats ✨"],
-  [false, "Try again!"],
-]);
+// MAPS
+// Comparatively more useful than sets
+// sets are mainly used when the concept of unique quantity comes in
+// follows a key-value assigning
 
-console.log(question);
+const rest = new Map();
+
+// set works similar to add of sets but set also returns the map after modified
+rest.set("name", "Benson's Delicacies");
+rest.set(1, "Firenze, Italy");
+
+console.log(rest.set(2, "Lisbon, Portugal"));
+
+// since set() method returns the modified Map we can chain the set() method
+rest
+  .set("categories", ["Italian", "Pizzaria", "Vegeterian", "Organic"])
+  .set("open", 4)
+  .set("close", 22)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(");
+
+// accessing elements of maps using get method
+
+console.log(rest.get(true));
+console.log(rest.get("open"));
+
+const time = 19;
+// Explanation
+// checks if time falls within the range of opening and closing
+// since it is a condition the output will be true or false
+// accordingly the true/false value in map will be printed
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+// few map methods
+console.log(rest.has("categories"));
+rest.delete(2);
+
+// rest.clear();
+const id = [1, 2];
+// rest.set([1, 2], "Test");
+rest.set(id, "Test");
+console.log(rest);
+console.log(rest.size);
+
+console.log(rest.get([1, 2])); // this is not possible and the result will be undefined
+console.log(rest.get(id));
