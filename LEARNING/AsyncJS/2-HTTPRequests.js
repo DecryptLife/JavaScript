@@ -104,9 +104,18 @@ console.log(4);
 //   });
 
 // comes in handy when we have to chain promises
+// once data is recieved we fire another promise when we use return
 getTodos("todos/luigi.json")
   .then((data) => {
-    console.log("promise resolved: ", data);
+    console.log("promise 1 resolved: ", data);
+    return getTodos("todos/mario.json");
+  })
+  .then((data) => {
+    console.log("promise 2 resolved: ", data);
+    return getTodos("todos/shaun.json");
+  })
+  .then((data) => {
+    console.log("promise 3 resolved: ", data);
   })
   .catch((err) => {
     console.log("promise rejected: ", err);
