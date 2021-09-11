@@ -1,0 +1,25 @@
+What is Node.js?
+ - Node allows us to run javascript on the server or directly on the system as well. We 
+ can run the javascript files on the browser using V8 enginer which compiles JS into machine
+ code during runtime. This V8 engine is also wrapped inside the Node and Node is written in C++
+ so it can be run on the computer as well. 
+
+ Node features:
+ - Read and write files on a computer
+ - Connect to a database
+ - Acts as a server for content
+
+Advantages
+- No need to learn an extra language for server
+- Can share code between front and back end
+- Node.js has massive community behind it
+- Huge amount of third-party packages & tools to help
+
+Global Object
+- It is already available and methods need not be preceded by the Object
+        - setTimeout displays the result after a delay of time that has been setTimeout
+        - setInterval will keep displaying the result after each interval
+
+
+__dirname => this gives the absolute path of the folder this file is in
+__filename => this gives the absolute path of the folder this file is in along with the __filename
