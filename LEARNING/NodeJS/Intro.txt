@@ -23,3 +23,8 @@ Global Object
 
 __dirname => this gives the absolute path of the folder this file is in
 __filename => this gives the absolute path of the folder this file is in along with the __filename
+
+
+File system
+-  import the object " require('fs') "
+-  fs.read(path_string, async function) - the async function is executed only after the file is read
