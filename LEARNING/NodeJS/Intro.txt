@@ -35,3 +35,70 @@ Streams
 sent would take a lot of time so usually data would be sent as small chunks of data through stream which would
 be packaged to what is known as buffer and is sent every time the buffer is filled.
 For example: Netflix
+
+
+Clients & Servers:
+1. IP Addresses
+        - domain name is used to mask the IP address because IP addresses are hard to memorize
+        - when we search for website in the browser the request is then sent to the sever where matching IP address
+        is returned. The communication between the browser and server is by using HTTP(set of protocols)
+In NodeJS we create a server manually.
+
+2. LocalHost
+- localhost is like a domain name on the web
+- localhost ip address -> 127.0.0.1 whhich points back to the computer
+- this means that when we are connecting to localhost on the browser we are connecting back to our own computer
+- here we will use our computer itself as the host
+
+3. PortNumber
+- They act like doors into a computer
+- different programs use different port numbers to communicate with the browser
+- for local development we generally use 3000
+
+4. Creating server
+// createServer() holds a parameter which is a callback function which is fired
+// everytime some request comes in to the server
+// req holds the address where the request is coming from ie the url
+// res is what we send back based on the req we recieve
+
+5. Response Headers
+// response headers give browser little info about what info is coming back to it
+// set header content type
+// res.setHeader("Content-Type", "text/plain");
+
+6. Status Codes
+- It describes the type of response sent to the browser
+- Examples
+        - 200 - OK
+        - 301 - Resourced moved
+        - 404 - Not found
+        - 500 - Internal server error
+- 100 Range - Informational responses for browser
+- 200 Range - success code
+- 300 Range - codes for redirects
+- 400 Range - user or client error codes
+- 500 Range - server error codes
+
+7. Redirects
+Imagine using a page as about-me and then you wanted to change it to just /about and there are
+a lot of people still using the previous version this is when redirects comes into play. Redirects
+helps in resolving this and give the same output as before. It identifies the previous version and 
+points out to the same old site though it has been changed
+
+Using switch case for redirects or for switching pages isn't a good practice as the could would Start
+becoming messy instead we will be using express. 
+
+8. NPM - Node Package Manager
+nodemon - helps with development workflow and wont have to keep restarting manually
+-g means globally which means this could be used for other projects as well and not specific to this alone
+- to create the package.json file we have to used "npm init"
+- package-lock.json => it keeps track of different dependency versions installed in our project
+- utility library lodash
+- whenever we install a node package locally a node_modules folder is automatically created where all packages are kept
+
+9. Dependencies
+The dependencies used in the project is shown is the package.json file  and when we usually share the code we 
+do not include the folder node_modules as it is a large file. So when we get a project that does not have the node node_modules
+open up and see the dependencies we have to install. Installing each one by one isn't a good idea 
+
+So use "npm install" which checks for the dependencies in package.json and installs them if not already installed
