@@ -28,3 +28,10 @@ __filename => this gives the absolute path of the folder this file is in along w
 File system
 -  import the object " require('fs') "
 -  fs.read(path_string, async function) - the async function is executed only after the file is read
+
+Streams
+- Start using data, before it has finished loading 
+- Situations when there is huge amount of data to be sent to the browser waiting for the entire thing to be
+sent would take a lot of time so usually data would be sent as small chunks of data through stream which would
+be packaged to what is known as buffer and is sent every time the buffer is filled.
+For example: Netflix
