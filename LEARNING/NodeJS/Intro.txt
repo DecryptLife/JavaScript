@@ -101,4 +101,7 @@ The dependencies used in the project is shown is the package.json file  and when
 do not include the folder node_modules as it is a large file. So when we get a project that does not have the node node_modules
 open up and see the dependencies we have to install. Installing each one by one isn't a good idea 
 
-So use "npm install" which checks for the dependencies in package.json and installs them if not already installed
+So use "npm install" which checks for the dependencies in package.json and installs them if not already 
+
+Express is a framework that helps us to easily manage routing, requests and server side logic in much better way making code more readable
+Saves time, clean code executed
