@@ -105,3 +105,19 @@ So use "npm install" which checks for the dependencies in package.json and insta
 
 Express is a framework that helps us to easily manage routing, requests and server side logic in much better way making code more readable
 Saves time, clean code executed
+
+** View Engines
+-> All this while we have been sending static (predefined and no changes) html files back to the browser
+- easily possible in express apps
+- we will be using EJS(Embedded javascript) to install -> npm install ejs
+- ejs tags <% %>
+- generally whatever comes between <% %> is not printed in the browser but is used in the server to print it to browser we have to use <%= %> 
+- EJS Templates
+        - EJS templates are processed through the EJS view engine on the server
+        - the ejs file would be sent to the EJS view engine which would look for the dynamic part(loops etc) and render the html part back to the browser
+        - this whole process is called as server side rendering
+- Partial templates = The part of the templates that can be re-used in multiple files is called Partials
+        - Steps to do this
+        - create a folder named partials(or any) inside views and check for codes that could be reused in the files of views folder
+        - inside the <%- %> type include(path) for include we use '-' inside the <%
+        - we used = because "=" skips the escape characters
