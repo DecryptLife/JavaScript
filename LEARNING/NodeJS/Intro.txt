@@ -121,3 +121,35 @@ Saves time, clean code executed
         - create a folder named partials(or any) inside views and check for codes that could be reused in the files of views folder
         - inside the <%- %> type include(path) for include we use '-' inside the <%
         - we used = because "=" skips the escape characters
+
+** MiddleWare
+- Code which runs(on the server) between getting a request and sending a response
+- basically things that run on the server
+- runs from top to bottom unless any function sends back the response in between
+- Other things we could do with MiddleWare
+        - Logger MiddleWare to log details of every request
+        - Authentication check MiddleWare for protected routes
+        - MiddleWare to parse JSON data from requests
+        - Return 404 pages
+- using morgan - 3rd party MiddleWare used for logging
+- you can't directly access static files in express for that we use express.static('public'), we place all static files that needs to be accessed in the public folder
+
+** MongoDB and Mongoose
+- It is a NoSQL database
+- SQL uses tables, rows and columns to store records of data whereas NoSQL uses collections and documents
+- collections holds multiple documents of the same type
+- after creating collections create an user so that the user can access the database from code so that not everyone can connect to the database 
+- To create an user
+        - Left side Database access -> add new database user 
+- to connect to the db -> connect -> connect your application -> copy the connection string and add to the app file -> change password and database name
+
+- ** Mongoose
+        - Mongoose is an ODM library - Object Document Mapping library
+        - It wraps the MongoDB api and provides easier way to connect and communicate with the database
+        - Schems and Models 
+                -Schema  defines the structure of a type of data/document and also the the properties and the property types
+                - Example:
+                        title (string), required
+                        snippet (string),required
+                        body (string), required
+        -Models allow us to communicate with database collections
